@@ -1,6 +1,8 @@
 from django.db import models
 # add this import
 from datetime import date
+# Import the User
+from django.contrib.auth.models import User
 
 # A tuple of 2-tuples
 MEALS = (
@@ -32,7 +34,9 @@ class Cat(models.Model):
       # add this new method
     def fed_for_today(self):
         return self.feeding_set.filter(date=date.today()).count() >= len(MEALS)
-    
+      # Add the foreign key linking to a user instance
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False, default='')
+  
 # Add new Feeding model below Cat model
 class Feeding(models.Model):
   # the first optional positional argument overrides the label
