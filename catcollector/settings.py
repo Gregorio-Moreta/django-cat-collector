@@ -25,11 +25,11 @@ environ.Env.read_env()
 
 # Load up the env variables for use in this file
 SECRET_KEY=env('SECRET_KEY')
-PGDATABASE=env('PGDATABASE')
-PGHOST=env('PGHOST')
-PGPASSWORD=env('PGPASSWORD')
-PGPORT=env('PGPORT')
-PGUSER=env('PGUSER')
+# PGDATABASE=env('PGDATABASE')
+# PGHOST=env('PGHOST')
+# PGPASSWORD=env('PGPASSWORD')
+# PGPORT=env('PGPORT')
+# PGUSER=env('PGUSER')
 DATABASE_URL=env('DATABASE_URL')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
